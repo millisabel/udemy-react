@@ -4,6 +4,7 @@ import AppFilter from "../app-filter/app-filter";
 import EmployersList from "../employers-list/employers-list";
 
 import './app.css';
+import EmployersAddForm from "../employers-add-form/employers-add-form";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <AppFilter/>
             </div>
             <EmployersList/>
+            <EmployersAddForm/>
         </div>
     );
 }
