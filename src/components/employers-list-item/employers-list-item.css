@@ -50,7 +50,7 @@
     opacity: 0;
 }
 
-.list-group-item.like .fa-star {
+.list-group-item.rise .fa-star {
     opacity: 1;
     transform: translateX(0px);
 }

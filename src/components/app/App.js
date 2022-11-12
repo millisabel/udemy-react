@@ -13,13 +13,15 @@ class App extends Component{
         super(props);
         this.state = {
             data: [
-                {name: 'Vanya', salary: 389, increase: false, like: true, id: 1},
-                {name: 'Petr', salary: 453, increase: true, like: false, id: 2},
-                {name: 'Rita', salary: 124, increase: false, like: false, id: 3},
+                {name: 'Vanya', salary: 389, increase: false, rise: true, id: 1},
+                {name: 'Petr', salary: 453, increase: false, rise: false, id: 2},
+                {name: 'Rita', salary: 124, increase: false, rise: false, id: 3},
+                {name: 'Lena', salary: 10000, increase: true, rise: true, id: 4},
             ],
             term: '',
+            filter: '',
         }
-        this.maxId = 4;
+        this.maxId = 5;
     }
 
     deleteItem = (id) => {
@@ -112,11 +114,28 @@ class App extends Component{
         this.setState({term});
     }
 
+    filterPost = (items, filter) => {
+        switch (filter){
+            case 'rise':
+                return items.filter(item => item.rise);
+            case 'moreThen1000':
+                return items.filter(item => item.salary > 1000)
+            case 'prize':
+                return items.filter(item => item.increase)
+            default:
+                return items;
+        }
+    }
+
+    onFilterSelect = (filter) => {
+        this.setState({filter})
+    }
+
     render() {
-        const {data,term} = this.state;
+        const {data,term, filter} = this.state;
         const employees = this.state.data.length;
         const increase = this.state.data.filter(item => item.increase).length;
-        const visibleData = this.searchEmp(data, term);
+        const visibleData = this.filterPost(this.searchEmp(data, term), filter);
 
         return (
             <div className="app">
@@ -126,7 +145,10 @@ class App extends Component{
                 />
                 <div className="search-panel">
                     <SearchPanel onUpdateSerch = {this.onUpdateSearch}/>
-                    <AppFilter/>
+                    <AppFilter
+                        filter={filter}
+                        onFilterSelect = {this.onFilterSelect}
+                    />
                 </div>
                 <EmployersList
                     data = {visibleData}
