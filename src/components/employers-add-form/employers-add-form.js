@@ -11,6 +11,7 @@ class EmployersAddForm extends Component {
         }
     }
 
+
     onValueChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -40,6 +41,8 @@ class EmployersAddForm extends Component {
                            placeholder="Как его зовут?"
                            name="name"
                            value={name}
+                           required
+                           minLength={3}
                            onChange={this.onValueChange}
                     />
                     <input type="number"
@@ -47,6 +50,8 @@ class EmployersAddForm extends Component {
                            placeholder="З/П в $?"
                            name="salary"
                            value={salary}
+                           required
+                           min={1}
                            onChange={this.onValueChange}
                     />
 
