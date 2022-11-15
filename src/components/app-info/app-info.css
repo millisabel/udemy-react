@@ -5,3 +5,9 @@
     box-shadow: 15px 15px 30px rgba(0, 0, 0, .15);
     color: #fff;
 }
+
+.app-title{
+    margin-bottom: 50px;
+
+    text-align: center;
+}
