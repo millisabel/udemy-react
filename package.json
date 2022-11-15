@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "udemy-react",
   "version": "0.1.0",
-  "homepage": "https://millisabel.github.io/my-app",
+  "homepage": "https://millisabel.github.io/udemy-react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
