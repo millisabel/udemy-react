@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.8a435eee.css",
-    "main.js": "/my-app/static/js/main.e19989eb.js",
-    "index.html": "/my-app/index.html",
-    "main.8a435eee.css.map": "/my-app/static/css/main.8a435eee.css.map",
-    "main.e19989eb.js.map": "/my-app/static/js/main.e19989eb.js.map"
+    "main.css": "/udemy-react/static/css/main.8a435eee.css",
+    "main.js": "/udemy-react/static/js/main.e19989eb.js",
+    "index.html": "/udemy-react/index.html",
+    "main.8a435eee.css.map": "/udemy-react/static/css/main.8a435eee.css.map",
+    "main.e19989eb.js.map": "/udemy-react/static/js/main.e19989eb.js.map"
   },
   "entrypoints": [
     "static/css/main.8a435eee.css",
